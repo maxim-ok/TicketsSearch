@@ -61,24 +61,6 @@ public class TicketInfoTest {
     }
 
 
-    @Test
-    public void shouldRemoveById() {
-
-        repo.save(flight1);
-        repo.save(flight2);
-        repo.save(flight3);
-        repo.save(flight4);
-        repo.save(flight5);
-
-        repo.removeById(3);
-
-        TicketInfo[] actual = repo.findAll();
-        TicketInfo[] expected = {flight1, flight2, flight4, flight5};
-
-        assertArrayEquals(expected, actual);
-
-
-    }
 
 
 }
